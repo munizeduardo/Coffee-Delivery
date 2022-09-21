@@ -7,7 +7,9 @@ import logoCoffeeDelivery from '../../assets/logo-coffee-delivery.svg'
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={logoCoffeeDelivery} alt="" />
+      <NavLink to="/" title="Home">
+        <img src={logoCoffeeDelivery} alt="" />
+      </NavLink>
       <nav>
         <LocationContainer>
           <NavLink to="/" title="Location">
@@ -17,7 +19,7 @@ export function Header() {
         </LocationContainer>
 
         <ShopcartContainer>
-          <NavLink to="/" title="Cart">
+          <NavLink to="/checkout" title="Cart">
             <ShoppingCart size={24} weight="fill" />
           </NavLink>
         </ShopcartContainer>

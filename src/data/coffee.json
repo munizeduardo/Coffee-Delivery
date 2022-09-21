@@ -1,0 +1,115 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Expresso",
+    "tags": ["Classic"],
+    "description": "The classic coffee brewed on hot water",
+    "price": 9.9,
+    "img": "coffee/classic-expresso.png"
+  },
+  {
+    "id": 2,
+    "name": "American Expresso",
+    "tags": ["Classic"],
+    "description": "Diluted Expresso, less intense than a classic expresso",
+    "price": 9.9,
+    "img": "coffee/american.png"
+  },
+  {
+    "id": 3,
+    "name": "Creamy Expresso",
+    "tags": ["Classic"],
+    "description": "Classic Expresso with a creamy foam",
+    "price": 9.9,
+    "img": "coffee/creamy-expresso.png"
+  },
+  {
+    "id": 4,
+    "name": "Cold Expresso",
+    "tags": ["Classic", "Cold"],
+    "description": "A Classic Expresso cold brew",
+    "price": 9.9,
+    "img": "coffee/cold-expresso.png"
+  },
+  {
+    "id": 5,
+    "name": "Milk Coffee",
+    "tags": ["Classic", "Milk"],
+    "description": "Half-and-half, coffee with vaporized milk",
+    "price": 9.9,
+    "img": "coffee/milk-coffee.png"
+  },
+  {
+    "id": 6,
+    "name": "Latte",
+    "tags": ["Classic", "Milk"],
+    "description": "One part coffee, three parts milk with a creamy foam",
+    "price": 9.9,
+    "img": "coffee/latte.png"
+  },
+  {
+    "id": 7,
+    "name": "Capuccino",
+    "tags": ["Classic", "Milk"],
+    "description":"Made with cinnamon, has equal parts coffe, milk and foam",
+    "price": 9.9,
+    "img": "coffee/capuccino.png"
+  },
+  {
+    "id": 8,
+    "name": "Macchiato",
+    "tags": ["Classic", "Milk"],
+    "description": "Expresso with a bit of warm milk and foam",
+    "price": 9.9,
+    "img": "coffee/macchiato.png"
+  },
+  {
+    "id": 9,
+    "name": "Mocaccino",
+    "tags": ["Classic", "Milk"],
+    "description": "Expresso with chocolate syrup, a bit of milk and foam",
+    "price": 9.9,
+    "img": "coffee/mocaccino.png"
+  },
+  {
+    "id": 10,
+    "name": "Hot Chocolate",
+    "tags": ["Special", "Milk"],
+    "description": "Drink made with chocolate solved in warm milk and coffee",
+    "price": 9.9,
+    "img": "coffee/hot-chocolate.png"
+  },
+  {
+    "id": 11,
+    "name": "Cuban",
+    "tags": ["Special", "Alcohol", "Cold"],
+    "description": "Cold brewed Expresso with rum, heavy cream and mint",
+    "price": 9.9,
+    "img": "coffee/cuban.png"
+  },
+  {
+    "id": 12,
+    "name": "Hawaiian",
+    "tags": ["Special"],
+    "description": "Sweet beverage made with coffee and coconut milk",
+    "price": 9.9,
+    "img": "coffee/hawaiian.png"
+  },
+  {
+    "id": 13,
+    "name": "Arabic",
+    "tags": ["Special"],
+    "description": "Coffee pmade with arabaic coffee grains and spices",
+    "price": 9.9,
+    "img": "coffee/arabic.png"
+  },
+  {
+    "id": 14,
+    "name": "Irish",
+    "tags": ["Special", "Alcohol"],
+    "description":
+      "Coffee-based beverage with irish whisky, sugar and whipped cream",
+    "price": 9.9,
+    "img": "coffee/irish.png"
+  }
+]

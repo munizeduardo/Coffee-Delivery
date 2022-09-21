@@ -1,7 +1,6 @@
 import {
   BaseCards,
   CoffeeCardContainer,
-  CoffeeContainer,
   CoffeeList,
   CoffeeMenuContainer,
   HomeBannerArea,
@@ -13,8 +12,10 @@ import {
   ShoppingCartCardContainer,
   TimerCardContainer,
 } from './styles'
+import coffeeList from '../../data/coffee.json'
 import coffeeBanner from '../../assets/coffee-delivery-cup-banner.png'
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
+import { Coffees } from '../../components/Coffees'
 
 export function Home() {
   return (
@@ -61,139 +62,9 @@ export function Home() {
       <CoffeeMenuContainer>
         <h2>Our Coffee</h2>
         <CoffeeList>
-          <CoffeeContainer>
-            <img src={coffeeBanner} alt="" />
-            <div className="tagContainer">
-              <p>TRADICIONAL</p>
-            </div>
-            <h3>Classic Expresso</h3>
-            <p>
-              The classic expresso coffee made with hot water and ground coffee
-            </p>
-            <div className="priceContainer">
-              <h2>R$9,90</h2>
-              <div className="amountContainer">
-                <input type="number"></input>
-                <button>
-                  <ShoppingCart size={24} weight="fill" />
-                </button>
-              </div>
-            </div>
-          </CoffeeContainer>
-          <CoffeeContainer>
-            <img src={coffeeBanner} alt="" />
-            <div className="tagContainer">
-              <p>TRADICIONAL</p>
-            </div>
-            <h3>Classic Expresso</h3>
-            <p>
-              The classic expresso coffee made with hot water and ground coffee
-            </p>
-            <div className="priceContainer">
-              <h2>R$9,90</h2>
-              <div className="amountContainer">
-                <input type="number"></input>
-                <button>
-                  <ShoppingCart size={24} weight="fill" />
-                </button>
-              </div>
-            </div>
-          </CoffeeContainer>
-          <CoffeeContainer>
-            <img src={coffeeBanner} alt="" />
-            <div className="tagContainer">
-              <p>TRADICIONAL</p>
-            </div>
-            <h3>Classic Expresso</h3>
-            <p>
-              The classic expresso coffee made with hot water and ground coffee
-            </p>
-            <div className="priceContainer">
-              <h2>R$9,90</h2>
-              <div className="amountContainer">
-                <input type="number"></input>
-                <button>
-                  <ShoppingCart size={24} weight="fill" />
-                </button>
-              </div>
-            </div>
-          </CoffeeContainer>
-          <CoffeeContainer>
-            <img src={coffeeBanner} alt="" />
-            <div className="tagContainer">
-              <p>TRADICIONAL</p>
-            </div>
-            <h3>Classic Expresso</h3>
-            <p>
-              The classic expresso coffee made with hot water and ground coffee
-            </p>
-            <div className="priceContainer">
-              <h2>R$9,90</h2>
-              <div className="amountContainer">
-                <input type="number"></input>
-                <button>
-                  <ShoppingCart size={24} weight="fill" />
-                </button>
-              </div>
-            </div>
-          </CoffeeContainer>
-          <CoffeeContainer>
-            <img src={coffeeBanner} alt="" />
-            <div className="tagContainer">
-              <p>TRADICIONAL</p>
-            </div>
-            <h3>Classic Expresso</h3>
-            <p>
-              The classic expresso coffee made with hot water and ground coffee
-            </p>
-            <div className="priceContainer">
-              <h2>R$9,90</h2>
-              <div className="amountContainer">
-                <input type="number"></input>
-                <button>
-                  <ShoppingCart size={24} weight="fill" />
-                </button>
-              </div>
-            </div>
-          </CoffeeContainer>
-          <CoffeeContainer>
-            <img src={coffeeBanner} alt="" />
-            <div className="tagContainer">
-              <p>TRADICIONAL</p>
-            </div>
-            <h3>Classic Expresso</h3>
-            <p>
-              The classic expresso coffee made with hot water and ground coffee
-            </p>
-            <div className="priceContainer">
-              <h2>R$9,90</h2>
-              <div className="amountContainer">
-                <input type="number"></input>
-                <button>
-                  <ShoppingCart size={24} weight="fill" />
-                </button>
-              </div>
-            </div>
-          </CoffeeContainer>
-          <CoffeeContainer>
-            <img src={coffeeBanner} alt="" />
-            <div className="tagContainer">
-              <p>TRADICIONAL</p>
-            </div>
-            <h3>Classic Expresso</h3>
-            <p>
-              The classic expresso coffee made with hot water and ground coffee
-            </p>
-            <div className="priceContainer">
-              <h2>R$9,90</h2>
-              <div className="amountContainer">
-                <input type="number"></input>
-                <button>
-                  <ShoppingCart size={24} weight="fill" />
-                </button>
-              </div>
-            </div>
-          </CoffeeContainer>
+          {coffeeList.map((coffee) => {
+            return <Coffees key={coffee.id} {...coffee} />
+          })}
         </CoffeeList>
       </CoffeeMenuContainer>
     </HomeContainer>

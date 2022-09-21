@@ -127,7 +127,6 @@ export const CoffeeMenuContainer = styled.div`
     max-height: 8rem;
   }
 `
-
 export const CoffeeContainer = styled.div`
   display: flex;
   flex-direction: column;
