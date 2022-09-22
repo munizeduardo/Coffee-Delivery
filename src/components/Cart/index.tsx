@@ -13,8 +13,20 @@ import {
 } from './styles'
 
 export function Cart() {
-  const { shoppingCart } = useShoppingCart()
+  const {
+    shoppingCart,
+    removeCoffeeFromCart,
+    increaseCoffeeQuantity,
+    decreaseCoffeeQuantity,
+  } = useShoppingCart()
 
+  const totalPrice = shoppingCart.reduce((total, item) => {
+    return total + item.price * item.quantity
+  }, 0)
+
+  const deliveryFee = 6
+
+  console.log(shoppingCart)
   return (
     <aside>
       <CartContainer>
@@ -28,15 +40,17 @@ export function Cart() {
                     <p className="itemName">{item.name}</p>
                     <div className="buttonContainer">
                       <QuantityButtonContainer>
-                        <button>
+                        <button onClick={() => decreaseCoffeeQuantity(item)}>
                           <Minus weight="bold" size={14} color="#8047F8" />
                         </button>
                         <p>{item.quantity}</p>
-                        <button>
+                        <button onClick={() => increaseCoffeeQuantity(item)}>
                           <Plus weight="bold" size={14} color="#8047F8" />
                         </button>
                       </QuantityButtonContainer>
-                      <RemoveButtonContainer>
+                      <RemoveButtonContainer
+                        onClick={() => removeCoffeeFromCart(item)}
+                      >
                         <Trash weight="bold" size={16} color="#8047F8" />
                         <p>REMOVE</p>
                       </RemoveButtonContainer>
@@ -52,17 +66,17 @@ export function Cart() {
           <PricesContainer>
             <Price>
               <p>Price details</p>
-              <p>R$ 10.00</p>
+              <p>R$ {totalPrice.toFixed(2)}</p>
             </Price>
 
             <Price>
               <p>Delivery fee</p>
-              <p>R$ 6.00</p>
+              <p>R$ {deliveryFee.toFixed(2)}</p>
             </Price>
 
             <Price>
               <h2>Total</h2>
-              <h2>R$ 10.00</h2>
+              <h2>R$ {(totalPrice + deliveryFee).toFixed(2)}</h2>
             </Price>
           </PricesContainer>
           <PlaceOrderButton>

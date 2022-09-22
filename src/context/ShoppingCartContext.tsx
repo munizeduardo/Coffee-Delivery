@@ -23,7 +23,8 @@ interface ShoppingCartContextProps {
     img: string
   }[]
   addCoffeeToCart: (newState: CartItemProps) => void
-  changeCoffeeQuantity: (newState: CartItemProps) => void
+  increaseCoffeeQuantity: (newState: CartItemProps) => void
+  decreaseCoffeeQuantity: (newState: CartItemProps) => void
   removeCoffeeFromCart: (newState: CartItemProps) => void
   shoppingCart: CartItemProps[]
 }
@@ -55,15 +56,35 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     }
   }
 
-  function changeCoffeeQuantity(selectedCoffee: CartItemProps) {
-    const currentCartState = shoppingCart
+  function increaseCoffeeQuantity(selectedCoffee: CartItemProps) {
+    setShoppingCart((currentItems) => {
+      return currentItems.map((item) => {
+        if (selectedCoffee.id === item.id) {
+          return { ...item, quantity: item.quantity + 1 }
+        } else {
+          return item
+        }
+      })
+    })
+  }
 
-    for (let i = 0; i < currentCartState.length; i++) {
-      if (currentCartState[i].id === selectedCoffee.id) {
-        currentCartState[i].quantity = selectedCoffee.quantity
+  function decreaseCoffeeQuantity(selectedCoffee: CartItemProps) {
+    setShoppingCart((currentItems) => {
+      if (
+        currentItems.find((item) => selectedCoffee.id === item.id)?.quantity ===
+        1
+      ) {
+        return currentItems.filter((item) => selectedCoffee.id !== item.id)
+      } else {
+        return currentItems.map((item) => {
+          if (selectedCoffee.id === item.id) {
+            return { ...item, quantity: item.quantity - 1 }
+          } else {
+            return item
+          }
+        })
       }
-    }
-    setShoppingCart(currentCartState)
+    })
   }
 
   function removeCoffeeFromCart(selectedCoffee: CartItemProps) {
@@ -79,7 +100,8 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
       value={{
         coffeeList,
         addCoffeeToCart,
-        changeCoffeeQuantity,
+        increaseCoffeeQuantity,
+        decreaseCoffeeQuantity,
         removeCoffeeFromCart,
         shoppingCart,
       }}

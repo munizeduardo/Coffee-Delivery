@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useShoppingCart } from '../../context/ShoppingCartContext'
 import { CoffeeContainer } from './styles'
 
-interface CoffeesProps {
+export interface CoffeesProps {
   id: number
   name: string
   tags: string[]

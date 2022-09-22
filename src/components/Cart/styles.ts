@@ -88,6 +88,10 @@ const BaseButtonContainer = styled.div`
   padding: 0.5rem;
   border-radius: 6px;
   background: ${(props) => props.theme['grey-400']};
+
+  button:hover {
+    cursor: pointer;
+  }
 `
 
 export const QuantityButtonContainer = styled(BaseButtonContainer)`
@@ -96,10 +100,9 @@ export const QuantityButtonContainer = styled(BaseButtonContainer)`
 `
 
 export const RemoveButtonContainer = styled(BaseButtonContainer)`
-  cursor: pointer;
-
   :hover {
     background: ${(props) => props.theme['grey-500']};
+    cursor: pointer;
   }
 
   p {
