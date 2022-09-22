@@ -1,5 +1,10 @@
 import { Cart } from '../../components/Cart'
+import { CheckoutContainer } from './styles'
 
 export function Checkout() {
-  return <Cart />
+  return (
+    <CheckoutContainer>
+      <Cart />
+    </CheckoutContainer>
+  )
 }
