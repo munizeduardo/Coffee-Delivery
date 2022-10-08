@@ -42,18 +42,18 @@ export const HomeBannerTitle = styled.div`
 export const HomeBannerCards = styled.div`
   max-width: 35.375rem;
   display: grid;
-  grid-template-columns: 0.8fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 20px 10px;
-  grid-template-areas:
-    '. .'
-    '. .';
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 `
 
 export const BaseCards = styled.div`
   display: flex;
+  flex: 1;
   align-items: center;
   gap: 0.75rem;
+
+  span {
+    flex: 1;
+  }
 
   svg {
     color: white;

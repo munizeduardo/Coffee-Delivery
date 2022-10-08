@@ -10,7 +10,7 @@ export const defaultTheme = {
   'brown-100': '#8D8686',
   'brown-300': '#574F4D',
   'brown-500': '#403937',
-  'brown-700': '',
+  'brown-700': '#272221',
 
   'yellow-300': '#F1E9C9',
   'yellow-500': '#DBAC2C',

@@ -1,10 +1,22 @@
 import { NavLink } from 'react-router-dom'
-import { HeaderContainer, LocationContainer, ShopcartContainer } from './styles'
+import {
+  CartQuantityTooltip,
+  HeaderContainer,
+  LocationContainer,
+  ShopcartContainer,
+} from './styles'
 
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import logoCoffeeDelivery from '../../assets/logo-coffee-delivery.svg'
+import { useShoppingCart } from '../../context/ShoppingCartContext'
 
 export function Header() {
+  const { shoppingCart } = useShoppingCart()
+
+  const itemQuantity = shoppingCart.reduce((total, item) => {
+    return total + item.quantity
+  }, 0)
+
   return (
     <HeaderContainer>
       <NavLink to="/" title="Home">
@@ -22,6 +34,9 @@ export function Header() {
           <NavLink to="/checkout" title="Cart">
             <ShoppingCart size={24} weight="fill" />
           </NavLink>
+          {itemQuantity > 0 && (
+            <CartQuantityTooltip>{itemQuantity}</CartQuantityTooltip>
+          )}
         </ShopcartContainer>
       </nav>
     </HeaderContainer>

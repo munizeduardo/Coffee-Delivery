@@ -1,19 +1,5 @@
 import styled from 'styled-components'
 
-export const CartContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  width: 28rem;
-  min-height: 31.125rem;
-  padding: 2.5rem;
-  border-radius: 6px 36px;
-
-  background: ${(props) => props.theme['grey-200']};
-`
-
 export const CartItemList = styled.div`
   flex: 1;
 `
@@ -58,12 +44,6 @@ export const CartItem = styled.div`
 
     width: 10.75rem;
     height: 2rem;
-
-    button {
-      color: ${(props) => props.theme['purple-300']};
-      all: unset;
-      display: flex;
-    }
   }
 
   .quantityContainer {
@@ -89,14 +69,26 @@ const BaseButtonContainer = styled.div`
   border-radius: 6px;
   background: ${(props) => props.theme['grey-400']};
 
-  button:hover {
-    cursor: pointer;
+  button {
+    all: unset;
+    display: flex;
   }
 `
 
 export const QuantityButtonContainer = styled(BaseButtonContainer)`
   justify-content: space-between;
   width: 4.5rem;
+
+  svg {
+    color: ${(props) => props.theme['purple-500']};
+  }
+
+  button:hover {
+    cursor: pointer;
+    svg {
+      color: ${(props) => props.theme['purple-700']};
+    }
+  }
 `
 
 export const RemoveButtonContainer = styled(BaseButtonContainer)`
@@ -139,27 +131,5 @@ export const Price = styled.div`
   h2 {
     font-size: 20px;
     font-family: Roboto, sans-serif;
-  }
-`
-
-export const PlaceOrderButton = styled.button`
-  all: unset;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 2.875rem;
-  border-radius: 6px;
-
-  background: ${(props) => props.theme['yellow-500']};
-
-  cursor: pointer;
-
-  :hover {
-    background: ${(props) => props.theme['yellow-700']};
-  }
-
-  p {
-    color: ${(props) => props.theme.white};
   }
 `

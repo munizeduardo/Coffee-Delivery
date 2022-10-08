@@ -11,9 +11,8 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    :focus {
+    *:focus {
         outline: 0;
-        box-shadow: 0 0 0 2px ${(props) => props.theme['grey-500']}
     }
 
     body {
@@ -24,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body, input, textarea, button, a {
         font-family: 'Roboto', sans-serif;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 1rem;
     }
 

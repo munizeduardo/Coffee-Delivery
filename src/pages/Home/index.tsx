@@ -15,7 +15,7 @@ import {
 import coffeeList from '../../data/coffee.json'
 import coffeeBanner from '../../assets/coffee-delivery-cup-banner.png'
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
-import { Coffees } from '../../components/Coffees'
+import { CoffeeCard } from '../../components/CoffeeCard'
 
 export function Home() {
   return (
@@ -32,27 +32,27 @@ export function Home() {
           <HomeBannerCards>
             <BaseCards>
               <ShoppingCartCardContainer>
-                <ShoppingCart size={16} weight="fill" />
+                <ShoppingCart weight="fill" />
               </ShoppingCartCardContainer>
-              Simple and safe payments
+              <span>Simple and safe payments</span>
             </BaseCards>
             <BaseCards>
               <PackageCardContainer>
-                <Package size={16} weight="fill" />
+                <Package weight="fill" />
               </PackageCardContainer>
-              Packaging protects the coffee
+              <span>Packaging protects the coffee</span>
             </BaseCards>
             <BaseCards>
               <TimerCardContainer>
-                <Timer size={16} weight="fill" />
+                <Timer weight="fill" />
               </TimerCardContainer>
-              Fast and tracked delivery
+              <span>Fast and tracked delivery</span>
             </BaseCards>
             <BaseCards>
               <CoffeeCardContainer>
-                <Coffee size={16} weight="fill" />
+                <Coffee weight="fill" />
               </CoffeeCardContainer>
-              Fresh coffee arrives at your doorstep
+              <span>Fresh coffee arrives at your doorstep</span>
             </BaseCards>
           </HomeBannerCards>
         </HomeBannerTextArea>
@@ -63,7 +63,7 @@ export function Home() {
         <h2>Our Coffee</h2>
         <CoffeeList>
           {coffeeList.map((coffee) => {
-            return <Coffees key={coffee.id} {...coffee} />
+            return <CoffeeCard key={coffee.id} {...coffee} />
           })}
         </CoffeeList>
       </CoffeeMenuContainer>

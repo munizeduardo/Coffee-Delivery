@@ -44,8 +44,30 @@ export const LocationContainer = styled(BaseAnchorContainer)`
 
 export const ShopcartContainer = styled(BaseAnchorContainer)`
   background: ${(props) => props.theme['yellow-300']};
+  position: relative;
 
   svg {
     color: ${(props) => props.theme['yellow-700']};
   }
+`
+
+export const CartQuantityTooltip = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.25rem;
+  max-height: 1.25rem;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(40%, -40%);
+
+  font-weight: bold;
+  font-size: 12px;
+
+  color: white;
+  background: ${(props) => props.theme['yellow-700']};
 `
