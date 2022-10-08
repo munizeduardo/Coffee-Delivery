@@ -9,7 +9,10 @@ export const HomeContainer = styled.div`
 
 export const HomeBannerArea = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
+
+  border-radius: 6px;
 
   img {
     max-width: 29.75rem;
@@ -43,6 +46,7 @@ export const HomeBannerCards = styled.div`
   max-width: 35.375rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-row-gap: 1.25rem;
 `
 
 export const BaseCards = styled.div`
