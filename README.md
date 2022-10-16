@@ -16,7 +16,7 @@ Coffee Delivery is a solution for people who want their coffee, wherever and whe
    * [Installing](#Installing)
    * [Samples images](#Sample-images)
    * [How to use](#How-to-use)
-   * [Tecnologies](#Tecnologies)
+   * [Technologies](#Technologies)
 <!--te-->
 
 ## Installing
@@ -53,7 +53,7 @@ Once you're done, you can then click the shopping cart icon a the top-right to g
   <img src="public/sample/submitSample.png" />
 </h1>
 
-## Tecnologies
+## Technologies
 
 - [Vite](https://vitejs.dev/)
 - [React](https://reactjs.org/)
